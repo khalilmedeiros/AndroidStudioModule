@@ -41,6 +41,13 @@ public class Aviao{
     public void setAltura(float altura){
         this.altura=altura;
     }
+    public void ligarMotor(){
+        setMotor(true);
+        System.out.println("Vrummmmmmm");
+    }
+    public void desligarMotor(){
+        setMotor(false);
+    }
     public String  toString(){
         return "Modelo: "+getModelo()+"\nId: "+getIdentificador()+"\nStatus motor: "+getMotor()+"\nAltura: "+getAltura();
     }
