@@ -5,6 +5,14 @@ public class Aviao{
     private boolean motor;
     private float altura;
 
+    Aviao(String modelo, String identificador){
+        this.modelo=modelo;
+        this.identificador=identificador;
+        this.motor=false;
+        this.altura=0.0f;
+    }
+
+
     public void ImprimaOk(){
         System.out.println("OK");
     }
@@ -34,6 +42,8 @@ public class Aviao{
         this.altura=altura;
     }
     public String  toString(){
-        return getModelo()+" "+getIdentificador()+" "+getMotor()+" "+getAltura();
+        return "Modelo: "+getModelo()+"\nId: "+getIdentificador()+"\nStatus motor: "+getMotor()+"\nAltura: "+getAltura();
     }
+
+
 }
