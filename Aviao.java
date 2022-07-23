@@ -48,6 +48,13 @@ public class Aviao{
     public void desligarMotor(){
         setMotor(false);
     }
+    public void imprimeEstadoMotor(){
+        if(getMotor()){
+            System.out.println("O motor está ligado..");
+        }else{
+            System.out.println("O motor está desligado..");
+        }
+    }
     public String  toString(){
         return "Modelo: "+getModelo()+"\nId: "+getIdentificador()+"\nStatus motor: "+getMotor()+"\nAltura: "+getAltura();
     }
