@@ -30,4 +30,10 @@ public class Aviao{
     public void setMotor(boolean motor){
         this.motor=motor;
     }
+    public void setAltura(float altura){
+        this.altura=altura;
+    }
+    public String  toString(){
+        return getModelo()+" "+getIdentificador()+" "+getMotor()+" "+getAltura();
+    }
 }
