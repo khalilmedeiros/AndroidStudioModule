@@ -3,6 +3,12 @@ public class Motor{
     private float potencia;
     private Boolean ativo;
 
+    Motor(String modelo,float potencia){
+        setModelo(modelo);
+        setPotencia(potencia);
+        setAtivo(false);
+    }
+
     public String getModelo(){
         return this.modelo;
     }
@@ -26,7 +32,7 @@ public class Motor{
 
     }
     public void desligar(){
-        
+
     }
 
 }
