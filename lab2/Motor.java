@@ -29,10 +29,12 @@ public class Motor{
     }
 
     public void ligar(){
-
+        setAtivo(true);
+        System.out.println("......VRUMMMM!!");
     }
     public void desligar(){
-
+        setAtivo(false);
+        System.out.println("mmmmm……..");
     }
 
 }
