@@ -75,17 +75,24 @@ public class Aviao{
             }
             System.out.println("Avião a "+getVelocidade()+"km/h");
         }else{
-            System.out.println("ERRO: Motor desligado")
+            System.out.println("ERRO: Motor desligado");
         }
     }
     public void desacelerar(){
         if(getEstadoMotor()){
-            if(!getMotorEsquerdo().getAtivo()){
-                setVelocidade(getVelocidade()-getMotorEsquerdo().getPotencia());
+            if(getVelocidade()==0f){
+                System.out.println("Avião a "+getVelocidade()+"km/h");
+            }else{
+                if(!getMotorEsquerdo().getAtivo()){
+                    setVelocidade(getVelocidade()-getMotorEsquerdo().getPotencia());
+                }
+                if(!getMotorDireito().getAtivo()){
+                    setVelocidade(getVelocidade()-getMotorDireito().getPotencia());
+                }
+                System.out.println("Avião a "+getVelocidade()+"km/h");
             }
-            if(!getMotorDireito().getAtivo()){
-                setVelocidade(getVelocidade()-getMotorDireito().getPotencia());
-            }
+        }else{
+            System.out.println("ERRO: Motor desligado");
         }
     }
     public Boolean getEstadoMotor(){
