@@ -2,8 +2,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        Motorizavel motor1 = new MotorTurbinado("ZeroM", 50.0f);
-        Motorizavel motor2 = new MotorTurbinado("UmM",50.0f);
+        MotorTurbinado motor1 = new MotorTurbinado("ZeroM", 50.0f);
+        MotorTurbinado motor2 = new MotorTurbinado("UmM",50.0f);
         Aviao aviao1 = new Aviao("Spitfire","AG007",motor1,motor2);
         Passageiro p1 = new Passageiro("Khalil","Gibran","123");
         Passageiro p2 = new Passageiro("Carlos","Magnum","456");
@@ -11,6 +11,10 @@ public class Main {
         Passageiro p4 = new Passageiro("Jessica","Alves","258");
         Passageiro p5 = new Passageiro("Veronica","Lima","369");
 
+        AguiaGigante aguia1 = new AguiaGigante(1000f,"Aguia1",200f);
+        AguiaGigante aguia2 = new AguiaGigante(1000f,"Aguia2",200f);
+        aviao1.setMotorDireito(aguia1);
+        aviao1.setMotorEsquerdo(aguia2);
         aviao1.ligarMotor();
         aviao1.adicionarPassageiro(p1);
         aviao1.adicionarPassageiro(p2);
