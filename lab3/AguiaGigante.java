@@ -35,7 +35,7 @@ public class AguiaGigante implements Motorizavel{
         this.força=força;
     }
     private void setAcordada(Boolean acordada){
-        this.acordada=acordadal;
+        this.acordada=acordada;
     }
 
     public Boolean getAtivo(){
